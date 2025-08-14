@@ -1,7 +1,4 @@
 local keymap = vim.keymap
--- local opts = { noremap = true, silent = true }
-local telescope = require("telescope.builtin")
-
 -- replace double qoutes with single quotes:
 -- s/"/'/g
 
@@ -49,35 +46,6 @@ keymap.set("n", "K", vim.lsp.buf.hover, {})
 keymap.set("n", "gd", vim.lsp.buf.definition, {})
 keymap.set("n", "gr", vim.lsp.buf.references, {})
 keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-
--- Telescope::
-keymap.set("n", "<leader>?", telescope.oldfiles, { desc = "[?] Find recently opened files" })
-keymap.set("n", "<leader><space>", telescope.buffers, { desc = "[ ] Find existing buffers" })
-keymap.set("n", "<leader>gf", telescope.git_files, { desc = "Search [G]it [F]iles" })
-keymap.set("n", "<leader>sf", telescope.find_files, { desc = "[S]earch [F]iles" })
-keymap.set("n", "<leader>sh", telescope.help_tags, { desc = "[S]earch [H]elp" })
-keymap.set("n", "<leader>sw", telescope.grep_string, { desc = "[S]earch current [W]ord" })
-keymap.set("n", "<leader>sg", telescope.live_grep, { desc = "[S]earch by [G]rep" })
-keymap.set("n", "<leader>sd", telescope.diagnostics, { desc = "[S]earch [D]iagnostics" })
-
-keymap.set("n", "<leader>/", function()
-  -- You can pass additional configuration to Telescope to change the theme, layout, etc.
-  telescope.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-    winblend = 10,
-    previewer = false,
-  }))
-end, { desc = "[/] Fuzzily search in current buffer" })
-
--- Test
--- keymap.set("n", "<leader>mt", ":lua require('neotest').run.run()<CR>", { desc = "[M]ake Neo[T]est run under cursor"})
--- keymap.set("n", "<leader>mo", ":lua require('neotest').output.open()<CR>", { desc = "NeoTest [O]utput"})
--- keymap.set("n", "<leader>mc", ":lua require('neotest').run.stop()<CR>", { desc = "[M]ale NeoTest [C]ancel the run" })
--- keymap.set("n", "<leader>mf", ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>", { desc = "[M]ake NeoTest for the [F]ile"})
--- keymap.set("n", "<leader>ms", ":lua require('neotest').summary.toggle()<CR>", { desc = "Toggle NeoTest [S]ummary"})
---
-
--- tabs
--- keymap.set("n", "te", "tabedit", opts)
 
 -- Close current buffer
 keymap.set("n", "<A-w>", [[:bd<Enter>]])
@@ -138,6 +106,3 @@ keymap.set("n", "<leader>H", "viw<leader>y")
 -- keymap.set("n", "viw", "C-w")
 -- Go To
 keymap.set({ "n", "v" }, "<leader>n", "g_")
-
--- Toggle NeoTree
--- keymap.set("n", "<leader>e", "<Cmd>Neotree toggle<CR>")

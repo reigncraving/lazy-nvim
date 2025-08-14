@@ -10,10 +10,6 @@ opt.winblend = 0
 opt.number = true
 opt.relativenumber = true
 
--- set Which key
--- local wk = require("which-key")
--- wk.register(mappings, opts)
-
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
