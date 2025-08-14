@@ -23,6 +23,7 @@ return {
       "ruby-lsp",
       "shfmt",
       "stylua",
+      "ruff",
       "typescript-language-server",
     },
   },
