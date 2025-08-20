@@ -30,6 +30,8 @@ return {
       "diff",
       "html",
       "javascript",
+      "ninja",
+      "rst",
       "jsdoc",
       "json",
       "jsonc",
