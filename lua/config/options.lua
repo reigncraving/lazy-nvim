@@ -1,5 +1,11 @@
 local opt = vim.opt
 
+-- clipboard
+-- unified:
+-- opt.clipboard = "unnamedplus"
+-- separate:
+opt.clipboard = ""
+
 --Cursor
 opt.cursorline = false -- Enable highlighting of the current line
 opt.termguicolors = true -- True color: support
